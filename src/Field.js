@@ -42,7 +42,7 @@ export default {
   computed: {
     fieldEvents() {
       return {
-        input: e => this.fieldState.change(e.target.value),
+        input: e => this.fieldState.change(e.target ? e.target.value : e),
         blur: () => this.fieldState.blur(),
         focus: () => this.fieldState.focus()
       }
